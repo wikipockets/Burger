@@ -1,14 +1,15 @@
-var mysql = require(mysql);
+var mysql = require('mysql');
 
 var connection;
 
-// If server contains the JAWSDB_URL environmental variable, it uses the JawsDB database, otherwise it uses local MAMP
+
+//use jawsdb environmnent and variable, otherwise use local mysql
 if (process.env.JAWSDB_URL) {
    connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
    connection = mysql.createConnection({
       host: "localhost",
-      port: 8889,
+      port: 3306,
       user: "root",
       password: "root",
       database: "burgers_db"

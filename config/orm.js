@@ -1,7 +1,8 @@
 // Using example from 17-CatsApp
+
 var connection = require("../config/connection.js");
 
-function printQuestionMarks(num) {
+function printZQuestionMarks(num) {
    var arr = [];
 
    for (var i = 0; i < num; i++) {
@@ -10,7 +11,7 @@ function printQuestionMarks(num) {
 
    return arr.toString();
 }
-
+//question marks para el query 
 function objToSql(ob) {
    var arr = [];
 
@@ -47,7 +48,7 @@ var orm = {
       queryString += cols.toString();
       queryString += ") ";
       queryString += "VALUES (";
-      queryString += printQuestionMarks(vals.length);
+      queryString += printZQuestionMarks(vals.length);
       queryString += ") ";
 
       console.log(queryString);
