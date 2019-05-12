@@ -12,7 +12,7 @@ body {
    background-color: white;
 }
 
-#cute_burger {
+#burgerimg {
    display: block;
    margin: auto;
 }
@@ -24,8 +24,15 @@ h1 {
    margin: 50px;
 }
 
+h4 {
+   text-align: center;
+   font-family: 'Fontdiner Swanky', cursive;
+   font-size: 35px;
+   margin: 50px;
+}
+
 .burgerAvailable {
-   font-family: 'Crafty Girls', cursive;
+   font-family: 'Roboto Mono', cursive;
    font-weight: normal;
    font-size: 20px;
    text-align: center;
@@ -43,7 +50,7 @@ h1 {
 }
 
 .burgerEaten {
-   font-family: 'Crafty Girls', cursive;
+   font-family: 'Roboto Mono', cursive;
    font-weight: normal;
    font-size: 20px;
    text-align: center;
@@ -66,7 +73,7 @@ h2 {
 }
 
 .addBurgerButton {
-   font-family: 'Crafty Girls', cursive;
+   font-family: 'Roboto Mono', cursive;
    font-weight: normal;
    font-size: 20px;
    text-align: center;
