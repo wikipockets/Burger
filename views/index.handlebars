@@ -1,31 +1,44 @@
-<div class="container"><h1>Eat-A-Burger!</h1>
-<div class="row">
-   <div class="col-md-6 offset-md-3">
-      <h2>Add A Burger</h2>
-      <div class="form-group"> 
-         <form method="post" action="api/burgers"></form>
-         <input class="form-control" type="text" id="ca" placeholder="Heres where you add your Burger">
+<h1>Eat-Da-Burger!</h1>
+
+<main>
+   <div class="container">
+      <div class="row">
+         <div class="col s6">
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <div>
+
+               {{!-- Using method put is outdated, but it works --}}
+               <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                  <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+               </form>
+            </div>
+            {{/unless}}
+            {{/each}}
+         </div>
+
+         <div class="col s6">
+            {{#each burgers}}
+            {{#if this.devoured}}
+            <div class='burgerEaten'>
+               <div>
+                  {{this.burger_name}}
+               </div>
+            </div>
+            {{/if}}
+            {{/each}}
+         </div>
       </div>
    </div>
+</main>
+
+<h2>Compile Burger.cpp</h2>
+
+<div class="row">
+   <div class="col s12">
+      <form action="/burgers" method="POST">
+         <input type="text" id="name" name="burger_name" placeholder="That is a tasty Burger!">
+         <button type="submit" class="addBurgerButton">Compile Burger.cpp</button>
+      </form>
+   </div>
 </div>
-
-<h2>Choose a Burger</h2>
-<form class="create-form">
-
-   <div class="form-group">
-      <label for="ca">Cat Name:</label>
-      <input type="text" id="ca" name="name">
-   </div>
-
-   <div class="form-group">
-      <label for="sleepy">Sleepy?</label><br>
-      <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-      <input type="radio" name="sleepy" value="0"> Awake
-   </div>
-   </div>
-
-   <script>
-
-      //Jquery on clicks and ajax
-      
-   </script>

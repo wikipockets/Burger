@@ -1,4 +1,4 @@
-// Using example from 17-CatsApp
+// Ex From cats-app
 
 var connection = require("../config/connection.js");
 
